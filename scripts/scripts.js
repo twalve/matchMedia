@@ -55,16 +55,14 @@
             MTCHMD.shared.mediaquerylist(mql, viewports[index]);
           });
         }
-
         var viewports = ["xs", "tablet", "small", "desktop", "wide"];
+
         [ window.matchMedia("(max-width: 400px)"),
           window.matchMedia("(min-width: 401px) and (max-width: 640px)"),
           window.matchMedia("(min-width: 641px) and (max-width: 960px)"),
           window.matchMedia("(min-width: 961px) and (max-width: 1280px)"),
           window.matchMedia("(min-width: 1281px)")
         ].forEach(listen);
-
-        MTCHMD.shared.mediaquerylist();
       },
       init: function() {
         MTCHMD.matchmedia.listen();
