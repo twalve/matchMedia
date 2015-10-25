@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'viewports';
+  src: url('../fonts/viewports.eot?23576234');
+  src: url('../fonts/viewports.eot?23576234#iefix') format('embedded-opentype'),
+       url('../fonts/viewports.woff?23576234') format('woff'),
+       url('../fonts/viewports.ttf?23576234') format('truetype'),
+       url('../fonts/viewports.svg?23576234#viewports') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="sh-icon-"]:before, [class*=" sh-icon-"]:before {
+  font-family: "viewports";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+
+  font-variant: normal;
+  text-transform: none;
+
+  line-height: 1em;
+
+  margin-left: .2em;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
