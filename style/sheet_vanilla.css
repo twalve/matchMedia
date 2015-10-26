@@ -1,0 +1,60 @@
+body {
+  background-color: whitesmoke;
+  color: black;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+}
+
+input {
+  border: none;
+  background-color: transparent;
+  cursor: default;
+  display: block;
+  font-size: 3rem;
+  margin: 0 auto;
+  outline: none;
+  text-align: center;
+  width: 15rem;
+}
+
+.xs body {
+  background-color: firebrick;
+}
+
+.tablet body {
+  background-color: darkorange;
+}
+
+.small body {
+  background-color: gold;
+}
+
+.desktop body {
+  background-color: olivedrab;
+}
+
+.wide body {
+  background-color: steelblue;
+}
+
+.default body {
+  background-color: rebeccapurple;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 200;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.icon {
+  font-family: "viewports", sans-serif;
+  font-style: normal;
+}
+
+.xs .icon::before { content: '\e800'; } /* '' */
+.tablet .icon::before { content: '\e802'; } /* '' */
+.small .icon::before { content: '\e804'; } /* '' */
+.desktop .icon::before { content: '\e801'; } /* '' */
+.wide .icon::before { content: '\e803'; } /* '' */
