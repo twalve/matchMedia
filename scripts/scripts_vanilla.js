@@ -51,6 +51,10 @@
     matchmedia: {
       listen: function() {
         var listen = function(mql, index) {
+          if (mql.matches) {
+            MTCHMD.shared.mediaquerylist(mql, viewports[index]);
+          }
+
           mql.addListener(function(){
             MTCHMD.shared.mediaquerylist(mql, viewports[index]);
           });
@@ -66,7 +70,6 @@
       },
       init: function() {
         MTCHMD.matchmedia.listen();
-        MTCHMD.shared.mediaquery();
       }
     },
     resize: {
