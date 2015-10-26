@@ -50,15 +50,6 @@
     },
     matchmedia: {
       listen: function() {
-        var listen = function(mql, index) {
-          if (mql.matches) {
-            MTCHMD.shared.mediaquerylist(mql, viewports[index]);
-          }
-
-          mql.addListener(function(){
-            MTCHMD.shared.mediaquerylist(mql, viewports[index]);
-          });
-        }
         var viewports = ["xsmall", "small", "medium", "large", "xlarge"];
 
         [ window.matchMedia("(max-width: 420px)"),
@@ -66,7 +57,13 @@
           window.matchMedia("(min-width: 641px) and (max-width: 1024px)"),
           window.matchMedia("(min-width: 1025px) and (max-width: 1439px)"),
           window.matchMedia("(min-width: 1440px)")
-        ].forEach(listen);
+        ].map(function(mql, index) {
+          if (mql.matches) MTCHMD.shared.mediaquerylist(mql, viewports[index]);
+
+          mql.addListener(function(){ 
+            MTCHMD.shared.mediaquerylist(mql, viewports[index]); 
+          });
+        });
       },
       init: function() {
         MTCHMD.matchmedia.listen();
